@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jetzt im Schatten</title>
+<meta name="description" content="Welche Orte der Ostschweiz liegen gerade im Schatten der Berge? Live, mit dem echten Sonnenstand.">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect x='1' width='1' height='1' fill='%23e5005c'/%3E%3Crect x='2' width='1' height='1' fill='%23d20a12'/%3E%3Crect y='1' width='1' height='1' fill='%23e84e0f'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="top">
+  <div class="titles">
+    <div class="eyebrow">#30DayMapChallenge · Tag 17 · Light &amp; dark</div>
+    <h1>Jetzt gerade im Schatten</h1>
+  </div>
+  <span class="gi-logo" role="img" aria-label="GEOINFO"><i class="gi-m" aria-hidden="true"></i><i class="gi-r" aria-hidden="true"></i><i class="gi-o" aria-hidden="true"></i><span class="gi-wm" aria-hidden="true"><span class="gi-geo">GEO</span><span class="gi-info">INFO</span></span></span>
+</header>
+<main class="stage">
+  <section class="map" aria-label="Ostschweiz in 3D, Licht und Schatten jetzt">
+    <canvas id="map" tabindex="0" aria-label="3D-Gelände. Ziehen verschiebt, rechte Maustaste oder Shift dreht, Mausrad zoomt."></canvas>
+    <div class="labels" id="labels"></div>
+    <div class="hud">
+      <div class="clock" id="clock">--:--</div>
+      <div class="sub" id="sunline"></div>
+    </div>
+    <div class="legend">
+      <span class="t-lit">Sonne</span><span class="t-dark">Schatten</span>
+    </div>
+    <div class="status" id="status">Gelände wird geladen …</div>
+  </section>
+  <aside class="panel">
+    <div class="section">
+      <h2>Gerade im Schatten</h2>
+      <div class="counter" aria-live="polite"><span id="count">–</span> <small>von <span id="total">–</span> Orten</small></div>
+      <div class="quip" id="quip"></div>
+    </div>
+    <div class="section" style="padding-bottom:8px;border-bottom:0"><h2 id="listhead">Im Schatten</h2></div>
+    <div class="scroll"><ul class="orte" id="list"></ul></div>
+    <div class="section" style="border-bottom:0;border-top:1px solid var(--border-hairline);font-size:12px;color:var(--text-muted)" id="definition"></div>
+  </aside>
+</main>
+<footer class="bottom">
+  <span>Gelände: swisstopo swissALTIRegio · Ortsnamen: swisstopo swissNAMES3D · Sonnenstand: berechnet</span>
+  <span>Orte ab 100 Einwohnern · Kantonsgrenzen: swisstopo swissBOUNDARIES3D · Überhöhung 1.4-fach</span>
+</footer>
+<script type="module" src="js/jetzt.js"></script>
+</body>
+</html>
